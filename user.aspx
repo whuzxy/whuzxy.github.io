@@ -147,7 +147,7 @@
 
         //    Response.Write(dlg);
         //window.location.reload();
-        //       Response.Redirect("index.aspx.html");
+        //       Response.Redirect("index.html");
         //    Response.Redirect( Request.Url.ToString()); 
     }
 
