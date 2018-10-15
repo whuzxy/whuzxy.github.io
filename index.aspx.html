@@ -1,0 +1,134 @@
+﻿<!-- <%@ Page Language="C#" %> -->
+
+<!DOCTYPE html>
+
+<script runat="server">
+
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>1304Family</title>
+
+<style>
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<script src="js/prefixfree.min.js"></script>
+
+    
+</head>
+
+<body>
+    <embed src="" hidden="true" />
+
+	
+
+    <div style="position:absolute; left:690px; top:20px">
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					这是我们相识相知的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					时光不老，友谊长在。<br/>
+					<div class="signature">- 1304 Family</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+		
+		<map name="mymap">    
+			  
+			<area href="temp.asp?id=0" shape=circle coords="248,122,18">   
+			<area href="temp.asp?id=1" title="王晨卉" shape=circle coords="78,71,18">  
+			<area href="temp.asp?id=2" shape=circle coords="147,71,18">		  
+			<area href="temp.asp?id=3" shape=circle coords="197,73,18">		  
+			<area href="temp.asp?id=4" shape=circle coords="242,73,18">		  
+			<area href="temp.asp?id=5" shape=circle coords="316,102,18">		  
+			<area href="temp.asp?id=6" title="王少宇" shape=circle coords="360,83,18">		  
+			<area href="temp.asp?id=7" shape=circle coords="415,102,18">		  
+			<area href="temp.asp?id=8" shape=circle coords="430,150,18">		  
+			<area href="temp.asp?id=9" shape=circle coords="513,85,18">		  
+			<area href="temp.asp?id=10" shape=circle coords="579,83,18">		  
+			<area href="temp.asp?id=11" shape=circle coords="578,138,18">		  
+			<area href="temp.asp?id=12" shape=circle coords="303,195,18">		  
+			<area href="temp.asp?id=13" shape=circle coords="496,136,18">		  
+			<area href="temp.asp?id=14" shape=circle coords="155,163,18">		  
+			<area href="temp.asp?id=15" title="罗琪" shape=circle coords="75,132,18">		  
+			<area href="temp.asp?id=16" title="索姝" shape=circle coords="68,199,18">		  
+			<area href="temp.asp?id=17" shape=circle coords="239,244,18">		  
+			<area href="temp.asp?id=18" shape=circle coords="203,163,18">		  
+			<area href="temp.asp?id=19" shape=circle coords="244,181,18">		  
+			<area href="temp.asp?id=20" shape=circle coords="301,142,18">		  
+			<area href="temp.asp?id=21" title="徐哲" shape=circle coords="440,199,18">		  
+			<area href="temp.asp?id=22" title="叶日晨" shape=circle coords="587,201,18">		  
+			<area href="temp.asp?id=23" title="刘洋" shape=circle coords="496,203,18">		  
+			<area href="temp.asp?id=24" shape=circle coords="543,212,18">		  
+			<area href="temp.asp?id=25" title="王博" shape=circle coords="628,192,18">		  
+			<area href="temp.asp?id=26" title="张悦" shape=circle coords="579,278,18">		  
+			<area href="temp.asp?id=27" shape=circle coords="325,242,18">		  
+			<area href="temp.asp?id=28" shape=circle coords="376,272,18">		  
+			<area href="temp.asp?id=29" title="潘晓旭" shape=circle coords="191,262,18">		  
+			<area href="temp.asp?id=30" shape=circle coords="425,247,18">		  
+			<area href="temp.asp?id=31" shape=circle coords="62,271,18">		  
+			<area href="temp.asp?id=32" shape=circle coords="140,264,18">		
+		</map>
+        <div style="position:absolute; left:10px; top:20px">
+		<img src="1304_4.jpg" width="660" high="330" hover="1304" usemap=#mymap>
+		</div>
+            <h1><br/></h1>
+		<div style="position:absolute; left:100px; top:450px">
+		<a href="picture.aspx.html" title="图片"><img src="./pic.JPG" width="200" high="200" ></a>
+		</div>
+  		<div style="position:absolute; left:360px; top:450px;">
+		<a href="video.html" title="视频"><img src="./vid.JPG" width="200" high="200" ></a>
+		</div>
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2013, 9, 5);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+</body>
+</html>

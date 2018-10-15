@@ -1,0 +1,74 @@
+﻿ <!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>1304Family</title>
+
+    <style>
+        body {
+            background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497707984033&di=32ec7057fa0c26a8fc352652fd67adb8&imgtype=0&src=http%3A%2F%2Fbpic.ooopic.com%2F15%2F46%2F89%2F15468942-295d7438c8d3d52070ef31c57bf55386-0.jpg);
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="position:absolute; left:0px; top:0px;" >
+        <a href="../index.aspx.html"><img src="./home.png" width="40" high="40"></a>       
+    </div>
+    <div style="position:absolute; left:0px; top:40px;">
+        <a href="../picture.aspx.html"><img src="./pic.JPG" width="40" high="40"></a> 
+    </div>
+    <div style="position:absolute; left:0px; top:80px;">
+        <a href="../video.html"><img src="./vid.JPG" width="40" high="40"></a>
+    </div>
+    <div style="position:absolute; left:50px; top:60px">
+        <img src="../Image/{imgname}.jpg" width="150" high="200">
+
+    </div>
+    <div style="position:absolute; left:60px; top:230px">
+        <h1>{username}</h1>
+    </div>
+    <div style="position:absolute; left:300px; top:30px;width:721px; height:668px; overflow:auto;">
+        <table border="0" cellspacing="0">
+            <tbody>
+                <tr><td><f2></f2></td><td><f1></f1></td></tr>
+
+            </tbody>
+        </table>
+
+    </div>
+    <div style="position:absolute; left:30px; top:330px">
+        <form id="form1" name="form1" method="get" action="../database.asp">
+            <textarea name="TextBox_Word" id="TextBox_Word" type="text" maxlength="100" size="15" style="width:200px;height:150px;"></textarea></br>
+            <input type="text" id="nn1" maxlength="100" size="7" style="width:200px;height:20px;" hidden="hidden" /></br>
+            <input name="TextBox_Name" type="text" id="TextBox_Name" maxlength="100" size="7" style="width:200px;height:20px;" /></br>
+            <input name="nn" type="text" id="nn" maxlength="100" size="7" style="width:200px;height:20px;" hidden="hidden" /></br>
+            <input type="submit" value="ADD" id="Button1" />
+
+        </form>
+    </div>
+    <script>
+        var name, value;
+        var str = location.href; //取得整个地址栏
+        //    var num = str.indexOf("?")
+        //    str = str.substr(num + 1); //取得所有参数   stringvar.substr(start [, length ]
+
+        var arr = str.split("="); //各个参数放到数组里
+     //   var arr2 = arr.split("&");
+        /*    for (var i = 0; i < arr.length; i++) {
+                num = arr[i].indexOf("=");
+                if (num > 0) {
+                    name = arr[i].substring(0, num);
+                    value = arr[i].substr(num + 1);
+                    this[name] = value;
+                }
+            }*/
+        document.getElementById('nn').value = arr[1];</script>
+
+
+
+
+
+</body>
+</html>
